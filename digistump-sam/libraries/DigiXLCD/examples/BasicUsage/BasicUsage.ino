@@ -2,6 +2,17 @@
  * Modified for Digistump/DigiX - Digispark LCD Shield by Erik Kettenburg 11/2012
  */
 
+/* Guide for connecting expander and generic 1602 display - bjornrasm:
+    PCF8574       Display
+    P0            RS
+    P1            RW
+    P2            E
+    P3            Backlight (transistor needed)
+    P4            D4
+    P5            D5
+    P6            D6
+    P7            D7 */
+
 //#define DEBUG
 #include <Wire.h>                  // I2C Master lib for ATTinys which use USI - comment this out to use with standard arduinos
 #include <LiquidCrystal_I2C.h>          // for LCD w/ GPIO MODIFIED for the ATtiny85
