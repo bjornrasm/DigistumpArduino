@@ -1,0 +1,27 @@
+Guide for connecting expander and generic 1602 display - bjornrasm:
+
+    PCF8574       Display
+    ---------------------
+    P0            RS
+    P1            RW
+    P2            E
+    P3            Backlight
+    P4            D4
+    P5            D5
+    P6            D6
+    P7            D7
+
+Since not all PCF8574 packages have the same pin-layout,
+I've not included them in the table above.
+
+Note that this is completely different what is shown in the
+schematic diagram, but this will work for generic components.
+
+The T1 transistor driving the backligth drawn in the
+diagram, shouldn't be a PNP type, but NPN! Most small signal
+transistors will do, for example 2N2222.
+
+I would move the R1 resistor from the emitter to the
+collector (between collector and +5V). The value should
+be like you use for ordinary LEDs (about 200-300 ohms) for
+generic 1602 displays.
